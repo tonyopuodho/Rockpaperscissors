@@ -17,9 +17,11 @@ let computer
 let player
 let results
 
+
 itemElement.forEach((button) => button.addEventListener('click', () => {
     player = button.textContent
     computerFunctionality()
+    resultFunctionality()
 }))
 
 // a function that computes random rock, paper,scissors
@@ -35,8 +37,47 @@ function computerFunctionality(){
                 break;
                 case 3:
                     computer = "Scissors"
-                    break
+                    break;
     }
+}
 
-    console.log(computer)
+// implementing a function that determines whether the computer or player has won
+
+function resultFunctionality(){
+    if (computer === player) {
+        scoreElement.innerHTML = "Draw"
+        playerElement.innerHTML = `${player}`
+        computerElement.innerHTML = `${computer}`
+        draw_score += 1        
+    } else if (computer === "Rock") {
+        if (player === "Scissors") {
+            player_score += 1
+            playerElement.innerHTML = `${player}`
+            computerElement.innerHTML = `${computer}`
+            scoreElement.innerHTML = "You win"
+        } else{
+            scoreElement.innerHTML = "You lose"
+            computer_score += 1
+        }
+    } else if (computer === "Paper") {
+        if (player === "Scissors") {
+            player_score += 1
+            playerElement.innerHTML = `${player}`
+            computerElement.innerHTML = `${computer}`
+            scoreElement.innerHTML = "You win"            
+        } else{
+            scoreElement.innerHTML = "You lose"
+            computer_score += 1
+        }
+    } else if (computer === "Scissors") {
+        if (player === "Rock") {
+            player_score += 1
+            playerElement.innerHTML = `${player}`
+            computerElement.innerHTML = `${computer}`
+            scoreElement.innerHTML = "You win"
+        } else{
+            scoreElement.innerHTML = "You lose"
+            computer_score += 1
+        }
+    }
 }
