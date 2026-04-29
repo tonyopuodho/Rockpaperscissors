@@ -89,4 +89,18 @@ function resultFunctionality(){
             computer_score += 1
         }
     }
+
+    playerScore.innerHTML = player_score
+    computerScore.innerHTML = computer_score
+    drawscore.innerHTML = draw_score
 }
+
+resetButton.addEventListener('click',() => {
+    player_score = 0
+    computer_score = 0
+    draw_score = 0
+    
+    playerScore.innerHTML = player_score
+    computerScore.innerHTML = computer_score
+    drawscore.innerHTML = draw_score
+})
