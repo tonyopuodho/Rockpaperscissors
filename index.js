@@ -55,6 +55,9 @@ function resultFunctionality(){
             playerElement.innerHTML = `${player}`
             computerElement.innerHTML = `${computer}`
             scoreElement.innerHTML = "You win"
+        } else if(player === "Rock"){
+            scoreElement.innerHTML = "Draw"
+            draw_score += 1 
         } else{
             scoreElement.innerHTML = "You lose"
             computer_score += 1
@@ -65,6 +68,9 @@ function resultFunctionality(){
             playerElement.innerHTML = `${player}`
             computerElement.innerHTML = `${computer}`
             scoreElement.innerHTML = "You win"            
+        }else if(player === "Paper"){
+            scoreElement.innerHTML = "Draw"
+            draw_score += 1 
         } else{
             scoreElement.innerHTML = "You lose"
             computer_score += 1
@@ -75,6 +81,9 @@ function resultFunctionality(){
             playerElement.innerHTML = `${player}`
             computerElement.innerHTML = `${computer}`
             scoreElement.innerHTML = "You win"
+        }else if(player === "Scissors"){
+            scoreElement.innerHTML = "Draw"
+            draw_score += 1 
         } else{
             scoreElement.innerHTML = "You lose"
             computer_score += 1
